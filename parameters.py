@@ -19,7 +19,7 @@ classification_grid_parameters = {
         'min_samples_split': [0.2, 0.5, 0.7, 2],
         'min_samples_leaf': [0.2, 0.5, 1, 2],
         'max_features': [0.2, 0.5, 1, 2],
-    }'''',
+    }''''',
     GradientBoostingClassifier():   {
         'learning_rate': [0.05, 0.1, 0.3],
         'n_estimators': [40, 70, 100],
@@ -46,7 +46,7 @@ classification_grid_parameters = {
         'max_features': [0.2, 0.5, 1, 2],
     }
 }
-''''
+'''''
 regression_grid_parameters = {
     # SVR():  {
     #     'C': [0.0005, 0.001, 0.002, 0.01, 0.1, 1, 10],
