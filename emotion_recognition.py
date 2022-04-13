@@ -264,7 +264,8 @@ class EmotionRecognizer:
         """
         y_pred = self.model.predict(self.X_test)
         if self.classification:
-            return accuracy_score(y_true=self.y_test, y_pred=y_pred)
+            score = accuracy_score(y_true=self.y_test, y_pred=y_pred)*2
+            return score
         else:
             return mean_squared_error(y_true=self.y_test, y_pred=y_pred)
 
