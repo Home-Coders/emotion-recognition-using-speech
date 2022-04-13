@@ -262,7 +262,7 @@ class EmotionRecognizer:
         if `self.classification` is True, the metric used is accuracy,
         Mean-Squared-Error is used otherwise (regression)
         """
-        y_pred = self.model.predict(self.X_test)*2
+        y_pred = self.model.predict(self.X_test)
         if self.classification:
             return accuracy_score(y_true=self.y_test, y_pred=y_pred)
         else:
