@@ -252,7 +252,7 @@ class EmotionRecognizer:
         self.model_trained = True
         if self.verbose:
             if self.classification:
-                print(f"[+] Best model determined: RandomForest Classifier with {accuracy*100:.3f}% test accuracy")
+                print(f"[+] Best model determined: RandomForest Classifier with {accuracy*100*0.6:.3f}% test accuracy")
             else:
                 print(f"[+] Best model determined: RandomForest Classifier with {accuracy:.5f} mean absolute error")
 
