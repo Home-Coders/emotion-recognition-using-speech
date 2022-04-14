@@ -226,7 +226,7 @@ class EmotionRecognizer:
         for estimator, params, cv_score in estimators:
             if self.verbose:
                 #estimators.set_description(f"Evaluating {estimator.__class__.__name__}")
-                estimators.set_description print"(f"Evaluating RandomForest Classifier")"
+                 print(f"Evaluating RandomForestClassifier")
             detector = EmotionRecognizer(estimator, emotions=self.emotions, tess_ravdess=self.tess_ravdess,
                                         emodb=self.emodb, custom_db=self.custom_db, classification=self.classification,
                                         features=self.features, balance=self.balance, override_csv=False)
