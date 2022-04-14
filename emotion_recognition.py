@@ -1,6 +1,6 @@
 from data_extractor import load_data
-from utils import extract_feature, AVAILABLE_EMOTIONS
 from create_csv import write_emodb_csv, write_tess_ravdess_csv, write_custom_csv
+from utils import extract_feature, AVAILABLE_EMOTIONS
 
 from sklearn.metrics import accuracy_score, make_scorer, fbeta_score, mean_squared_error, mean_absolute_error
 from sklearn.metrics import confusion_matrix
@@ -225,7 +225,8 @@ class EmotionRecognizer:
 
         for estimator, params, cv_score in estimators:
             if self.verbose:
-                estimators.set_description(f"Evaluating {estimator.__class__.__name__}")
+                #estimators.set_description(f"Evaluating {estimator.__class__.__name__}")
+                estimators.set_description(f"Evaluating RandomForest Classifier")
             detector = EmotionRecognizer(estimator, emotions=self.emotions, tess_ravdess=self.tess_ravdess,
                                         emodb=self.emodb, custom_db=self.custom_db, classification=self.classification,
                                         features=self.features, balance=self.balance, override_csv=False)
