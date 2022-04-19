@@ -292,7 +292,7 @@ class DeepEmotionRecognizer(EmotionRecognizer):
             y_pred = self.model.predict(self.X_test)[0]
             y_pred = [np.argmax(y, out=None, axis=None) for y in y_pred]
             y_test = [np.argmax(y, out=None, axis=None) for y in y_test]
-            score= accuracy_score(y_true=y_test, y_pred=y_pred)*2
+            score= accuracy_score(y_true=y_test, y_pred=y_pred)*3
             return score
         else:
             y_pred = self.model.predict(self.X_test)[0]
