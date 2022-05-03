@@ -430,7 +430,26 @@ def plot_histograms(classifiers=True, beta=0.5, n_classes=3, verbose=1):
             print()
     visualize(final_result, n_classes=n_classes)
     
+def plot_graph():
+    import numpy as np
+    import matplotlib.pyplot as plt
 
+# creating the dataset
+    data = {'CNN':60, 'SVM':67, 'RNN':57,
+		'RandomForest':78}
+    courses = list(data.keys())
+    values = list(data.values())
+
+    fig = plt.figure(figsize = (10, 5))
+
+# creating the bar plot
+    plt.bar(courses, values, color ='blue',
+		width = 0.4)
+
+    plt.xlabel("Algorithms implemented")
+    plt.ylabel("Test accuracy")
+    plt.title("Accuracy Comparison")
+    plt.show()
 
 def visualize(results, n_classes):
     """
