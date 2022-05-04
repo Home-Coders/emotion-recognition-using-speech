@@ -430,7 +430,7 @@ def plot_histograms(classifiers=True, beta=0.5, n_classes=3, verbose=1):
             print()
     visualize(final_result, n_classes=n_classes)
     
-def plot_graph():
+def plot_graph(self):
 	# creating the dataset
 	data = {'CNN':60, 'SVM':67, 'RNN':57,
 		'RandomForest':78}
