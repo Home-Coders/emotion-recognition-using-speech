@@ -2,8 +2,8 @@ import matplotlib.pyplot as pl
 
 def plot_graph():
 	# creating the dataset
-	data = {'CNN':60, 'SVM':67, 'RNN':57,
-		'RandomForest':78}
+	data = {'CNN':60, 'SVM':83, 'RNN':66,
+		'RandomForest':88}
 	courses = list(data.keys())
 	values = list(data.values())
 
